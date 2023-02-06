@@ -1,10 +1,10 @@
 package handlers
 
 import (
-	"api-gateway/pkg/utils"
-	"api-gateway/services"
 	"context"
 	"github.com/gin-gonic/gin"
+	"gmf/src/gateway/common/utils"
+	"gmf/src/gateway/services"
 	"strconv"
 )
 
@@ -31,7 +31,7 @@ func CreateTask(ginCtx *gin.Context) {
 	var taskReq services.TaskRequest
 	PanicIfTaskError(ginCtx.Bind(&taskReq))
 	//从gin.keys取出服务实例
-	claim,_ := utils.ParseToken(ginCtx.GetHeader("Authorization"))
+	claim, _ := utils.ParseToken(ginCtx.GetHeader("Authorization"))
 	taskReq.Uid = uint64(claim.Id)
 	taskService := ginCtx.Keys["taskService"].(services.TaskService)
 	taskRes, err := taskService.CreateTask(context.Background(), &taskReq)
@@ -43,9 +43,9 @@ func GetTaskDetail(ginCtx *gin.Context) {
 	var taskReq services.TaskRequest
 	PanicIfTaskError(ginCtx.BindUri(&taskReq))
 	//从gin.keys取出服务实例
-	claim,_ := utils.ParseToken(ginCtx.GetHeader("Authorization"))
+	claim, _ := utils.ParseToken(ginCtx.GetHeader("Authorization"))
 	taskReq.Uid = uint64(claim.Id)
-	id,_ := strconv.Atoi(ginCtx.Param("id")) // 获取task_id
+	id, _ := strconv.Atoi(ginCtx.Param("id")) // 获取task_id
 	taskReq.Id = uint64(id)
 	productService := ginCtx.Keys["taskService"].(services.TaskService)
 	productRes, err := productService.GetTask(context.Background(), &taskReq)
@@ -57,8 +57,8 @@ func UpdateTask(ginCtx *gin.Context) {
 	var taskReq services.TaskRequest
 	PanicIfTaskError(ginCtx.Bind(&taskReq))
 	//从gin.keys取出服务实例
-	claim,_ := utils.ParseToken(ginCtx.GetHeader("Authorization"))
-	id,_ := strconv.Atoi(ginCtx.Param("id"))
+	claim, _ := utils.ParseToken(ginCtx.GetHeader("Authorization"))
+	id, _ := strconv.Atoi(ginCtx.Param("id"))
 	taskReq.Id = uint64(id)
 	taskReq.Uid = uint64(claim.Id)
 	taskService := ginCtx.Keys["taskService"].(services.TaskService)
@@ -71,13 +71,12 @@ func DeleteTask(ginCtx *gin.Context) {
 	var taskReq services.TaskRequest
 	PanicIfTaskError(ginCtx.Bind(&taskReq))
 	//从gin.keys取出服务实例
-	claim,_ := utils.ParseToken(ginCtx.GetHeader("Authorization"))
+	claim, _ := utils.ParseToken(ginCtx.GetHeader("Authorization"))
 	taskReq.Uid = uint64(claim.Id)
-	id,_ := strconv.Atoi(ginCtx.Param("id"))
+	id, _ := strconv.Atoi(ginCtx.Param("id"))
 	taskReq.Id = uint64(id)
 	taskService := ginCtx.Keys["taskService"].(services.TaskService)
 	taskRes, err := taskService.DeleteTask(context.Background(), &taskReq)
 	PanicIfTaskError(err)
 	ginCtx.JSON(200, gin.H{"data": taskRes.TaskDetail})
 }
-

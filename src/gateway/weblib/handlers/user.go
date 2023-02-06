@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"api-gateway/pkg/utils"
+	"api-gateway/common/utils"
 	"api-gateway/services"
 	"context"
 	"github.com/gin-gonic/gin"

@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"api-gateway/pkg/utils"
 	"github.com/gin-gonic/gin"
+	"gmf/src/gateway/common/utils"
 )
 
 // JWT token验证中间件

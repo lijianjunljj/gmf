@@ -1,30 +1,29 @@
 package conf
 
 import (
-	"fmt"
+	"gmf/src/user/model"
 	"gopkg.in/ini.v1"
 	"strings"
-	"user/model"
 )
-
 
 var (
-	Db         			string
-	DbHost     			string
-	DbPort     			string
-	DbUser     			string
-	DbPassWord 			string
-	DbName     			string
+	Db         string
+	DbHost     string
+	DbPort     string
+	DbUser     string
+	DbPassWord string
+	DbName     string
 )
 
-func Init() {
-	file, err := ini.Load("./conf/config.ini")
+func Init() error {
+	file, err := ini.Load("./src/user/conf/config.ini")
 	if err != nil {
-		fmt.Println("配置文件读取错误，请检查文件路径:", err)
+		return err
 	}
 	LoadMysqlData(file)
 	path := strings.Join([]string{DbUser, ":", DbPassWord, "@tcp(", DbHost, ":", DbPort, ")/", DbName, "?charset=utf8&parseTime=true"}, "")
 	model.Database(path)
+	return nil
 }
 
 func LoadMysqlData(file *ini.File) {

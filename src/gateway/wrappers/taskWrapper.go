@@ -1,10 +1,10 @@
 package wrappers
 
 import (
-	"api-gateway/services"
 	"context"
 	"github.com/afex/hystrix-go/hystrix"
 	"github.com/micro/go-micro/v2/client"
+	"gmf/src/gateway/services"
 	"strconv"
 )
 
@@ -53,9 +53,7 @@ func (wrapper *TaskWrapper) Call(ctx context.Context, req client.Request, rsp in
 	})
 }
 
-
 //NewProductWrapper 初始化Wrapper
 func NewTaskWrapper(c client.Client) client.Client {
 	return &TaskWrapper{c}
 }
-

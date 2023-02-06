@@ -1,9 +1,9 @@
 package weblib
 
 import (
-	"api-gateway/weblib/handlers"
-	"api-gateway/weblib/middleware"
 	"github.com/gin-gonic/gin"
+	"gmf/src/gateway/weblib/handlers"
+	"gmf/src/gateway/weblib/middleware"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/cookie"
@@ -36,4 +36,3 @@ func NewRouter(service ...interface{}) *gin.Engine {
 	}
 	return ginRouter
 }
-
