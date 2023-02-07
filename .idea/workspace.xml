@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e763b753-fc21-44de-a21c-748f93c9bd73" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/rabbitmq-server-3.11.8.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/config/parser/yamlParser.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/config/IniParser.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/config/parser/iniParser.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/config/Interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/config/parser/interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/config/Mysql.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/config/mysql.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/weblib/handlers/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/weblib/handlers/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +48,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "DefaultGoTemplateProperty": "Go File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
