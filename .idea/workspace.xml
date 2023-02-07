@@ -5,37 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e763b753-fc21-44de-a21c-748f93c9bd73" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/config/IniParser.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/config/Interface.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/config/Mysql.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-server-3.11.8.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/config/parser/yamlParser.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/etcd/etcd-v3.5.1-windows-amd64/default.etcd/member/snap/db" beforeDir="false" afterPath="$PROJECT_DIR$/etcd/etcd-v3.5.1-windows-amd64/default.etcd/member/snap/db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/etcd/etcd-v3.5.1-windows-amd64/default.etcd/member/wal/0000000000000000-0000000000000000.wal" beforeDir="false" afterPath="$PROJECT_DIR$/etcd/etcd-v3.5.1-windows-amd64/default.etcd/member/wal/0000000000000000-0000000000000000.wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/etcdkeeper/assets/framework/ace/mode-rdoc.js" beforeDir="false" afterPath="$PROJECT_DIR$/etcdkeeper/assets/framework/ace/mode-rdoc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/pkg/e/code.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/common/e/code.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/pkg/e/msg.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/common/e/msg.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/pkg/logging/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/common/logging/file.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/pkg/logging/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/common/logging/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/pkg/utils/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/common/utils/jwt.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/weblib/handlers/pkg.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/weblib/handlers/pkg.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/weblib/handlers/task.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/weblib/handlers/task.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/IniParser.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/config/parser/iniParser.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/Interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/config/parser/interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/Mysql.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/config/mysql.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gateway/weblib/handlers/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/weblib/handlers/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/weblib/middleware/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/weblib/middleware/jwt.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/weblib/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/weblib/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/wrappers/taskWrapper.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/wrappers/taskWrapper.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mq-server/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/conf/conf.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/conf/conf.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/core/userService.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/core/userService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,27 +50,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lijianjun&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "E:/go_projects/gmf/src/common/config",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\go_projects\gmf\src\common\config" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\go_projects\gmf\src\common\config\parser" />
       <recent name="E:\go_projects\gmf\src" />
     </key>
   </component>

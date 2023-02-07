@@ -1,10 +1,10 @@
 package handlers
 
 import (
-	"api-gateway/common/utils"
-	"api-gateway/services"
 	"context"
 	"github.com/gin-gonic/gin"
+	"gmf/src/gateway/common/utils"
+	"gmf/src/gateway/services"
 	"net/http"
 )
 
