@@ -1,20 +1,32 @@
-package main
+package gateway
 
 import (
 	"github.com/micro/go-micro/v2"
 	"github.com/micro/go-micro/v2/registry"
 	"github.com/micro/go-micro/v2/registry/etcd"
 	"github.com/micro/go-micro/v2/web"
+	"gmf/src/common/server"
 	"gmf/src/gateway/services"
 	"gmf/src/gateway/weblib"
 	"gmf/src/gateway/wrappers"
+	"golang.org/x/sync/errgroup"
 	"time"
 )
 
-type GateWay struct {
+func NewServer(g *errgroup.Group) *Server {
+	s := &Server{}
+	s.G = g
+	return s
 }
 
-func (g *GateWay) Start() {
+type Server struct {
+	server.Server
+}
+
+func (s Server) Name() string {
+	return "gateWay"
+}
+func (s Server) Run() error {
 	etcdReg := etcd.NewRegistry(
 		registry.Addrs("127.0.0.1:2379"),
 	)
@@ -48,4 +60,5 @@ func (g *GateWay) Start() {
 	//接收命令行参数
 	_ = server.Init()
 	_ = server.Run()
+	return nil
 }

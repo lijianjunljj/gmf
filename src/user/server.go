@@ -4,12 +4,25 @@ import (
 	"github.com/micro/go-micro/v2"
 	"github.com/micro/go-micro/v2/registry"
 	"github.com/micro/go-micro/v2/registry/etcd"
+	"gmf/src/common/server"
 	"gmf/src/user/conf"
 	"gmf/src/user/core"
 	"gmf/src/user/services"
+	"golang.org/x/sync/errgroup"
 )
 
+func NewServer(g *errgroup.Group) *Server {
+	s := &Server{}
+	s.G = g
+	return s
+}
+
 type Server struct {
+	server.Server
+}
+
+func (s Server) ErrGroup() *errgroup.Group {
+	return s.G
 }
 
 func (s Server) Name() string {
