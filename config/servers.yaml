@@ -1,0 +1,4 @@
+gateway:
+  serviceName: gateway
+userServer:
+  serviceName: rpcUserService

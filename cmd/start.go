@@ -11,6 +11,7 @@ import (
 	"gmf/src/common/config/parser"
 	"gmf/src/common/server"
 	"gmf/src/common/utils"
+	gateway "gmf/src/gateway"
 )
 
 // startCmd represents the start command
@@ -42,7 +43,12 @@ to quickly create a Cobra application.`,
 			if serverName == "all" {
 				server.StartAll(config)
 			} else {
-				server.Start(serverName, config)
+				if serverName == "gateway" {
+					gateway.GetInstance(nil).Run(config)
+				} else {
+					server.Start(serverName, config)
+				}
+
 			}
 		} else {
 			fmt.Println("please input server name")

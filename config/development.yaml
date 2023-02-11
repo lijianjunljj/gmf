@@ -13,3 +13,7 @@ etcd:
 web:
   addr: 127.0.0.1:4000
   protocol: http
+servers:
+  gateway:
+  userServer:
+    address: 127.0.0.1:8082
