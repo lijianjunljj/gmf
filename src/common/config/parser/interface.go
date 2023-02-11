@@ -1,6 +1,6 @@
 package parser
 
 type Parser interface {
-	Parse(string) error
-	GetString(string) string
+	Parse() error
+	GetString(string, string) string
 }

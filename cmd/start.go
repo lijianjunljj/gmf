@@ -7,7 +7,10 @@ package cmd
 import (
 	"fmt"
 	"github.com/spf13/cobra"
+	"gmf/src/common/config"
+	"gmf/src/common/config/parser"
 	"gmf/src/common/server"
+	"gmf/src/common/utils"
 )
 
 // startCmd represents the start command
@@ -25,10 +28,21 @@ to quickly create a Cobra application.`,
 		fmt.Println(args)
 		if len(args) > 0 {
 			serverName := args[0]
+			configFile := args[1]
+			if !utils.FileIsExisted(configFile) {
+				fmt.Println("配置文件不存在")
+				return
+			}
+			yamlParser := parser.NewYamlParser(configFile)
+			yamlParser.Parse()
+			config := config.NewConfig(yamlParser)
+			config.InitMysql()
+			config.InitEtcd()
+			config.InitWeb()
 			if serverName == "all" {
-				server.StartAll()
+				server.StartAll(config)
 			} else {
-				server.Start(serverName)
+				server.Start(serverName, config)
 			}
 		} else {
 			fmt.Println("please input server name")

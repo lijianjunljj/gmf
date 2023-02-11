@@ -1,14 +1,17 @@
 package gateway
 
 import (
+	"fmt"
 	"github.com/micro/go-micro/v2"
 	"github.com/micro/go-micro/v2/registry"
 	"github.com/micro/go-micro/v2/registry/etcd"
 	"github.com/micro/go-micro/v2/web"
+	"gmf/src/common/config"
 	"gmf/src/common/server"
-	"gmf/src/gateway/services"
-	"gmf/src/gateway/weblib"
+	web2 "gmf/src/gateway/web"
 	"gmf/src/gateway/wrappers"
+	taskservices "gmf/src/servers/task/services"
+	userservices "gmf/src/servers/user/services"
 	"golang.org/x/sync/errgroup"
 	"time"
 )
@@ -24,11 +27,13 @@ type Server struct {
 }
 
 func (s Server) Name() string {
-	return "gateWay"
+	return "gateway"
 }
-func (s Server) Run() error {
+func (s Server) Run(config *config.Config) error {
+	fmt.Println("config", config)
+	fmt.Println("config.Etcd.RegistryAddr:", config.Etcd.RegistryAddr)
 	etcdReg := etcd.NewRegistry(
-		registry.Addrs("127.0.0.1:2379"),
+		registry.Addrs(config.Etcd.RegistryAddr),
 	)
 	// 用户
 	userMicroService := micro.NewService(
@@ -37,25 +42,25 @@ func (s Server) Run() error {
 	)
 
 	// 用户服务调用实例
-	userService := services.NewUserService("rpcUserService", userMicroService.Client())
+	userService := userservices.NewUserService("rpcUserService", userMicroService.Client())
 
 	// task
 	taskMicroService := micro.NewService(
 		micro.Name("taskService.client"),
 		micro.WrapClient(wrappers.NewTaskWrapper),
 	)
-	taskService := services.NewTaskService("rpcTaskService", taskMicroService.Client())
+	taskService := taskservices.NewTaskService("rpcTaskService", taskMicroService.Client())
 
 	//创建微服务实例，使用gin暴露http接口并注册到etcd
 	server := web.NewService(
 		web.Name("httpService"),
-		web.Address("127.0.0.1:4000"),
+		web.Address(config.Web.Addr),
 		//将服务调用实例使用gin处理
-		web.Handler(weblib.NewRouter(userService, taskService)),
+		web.Handler(web2.NewRouter(userService, taskService)),
 		web.Registry(etcdReg),
 		web.RegisterTTL(time.Second*30),
 		web.RegisterInterval(time.Second*15),
-		web.Metadata(map[string]string{"protocol": "http"}),
+		web.Metadata(map[string]string{"protocol": config.Web.Protocol}),
 	)
 	//接收命令行参数
 	_ = server.Init()

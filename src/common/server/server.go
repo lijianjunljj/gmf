@@ -2,6 +2,7 @@ package server
 
 import (
 	"fmt"
+	"gmf/src/common/config"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -19,13 +20,12 @@ func Init() *Manager {
 	sm.Init()
 	return &sm
 }
-func StartAll() {
-	//fmt.Println(configFile)
-	sm.RunAll()
-}
-func Start(name string) {
-	err := sm.Run(name)
 
+func StartAll(config *config.Config) {
+	sm.RunAll(config)
+}
+func Start(name string, config *config.Config) {
+	err := sm.Run(name, config)
 	if err != nil {
 		fmt.Println(err.Error())
 	}

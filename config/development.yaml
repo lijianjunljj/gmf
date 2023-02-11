@@ -1,0 +1,15 @@
+service:
+  AppMode: debug
+  HttpPort: :3000
+mysql:
+  Db: mysql
+  DbHost: 127.0.0.1
+  DbPort: 3306
+  DbUser: root
+  DbPassWord: root
+  DbName: micro_todolist
+etcd:
+  registryAddr: 127.0.0.1:2379
+web:
+  addr: 127.0.0.1:4000
+  protocol: http

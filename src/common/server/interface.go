@@ -1,9 +1,12 @@
 package server
 
-import "golang.org/x/sync/errgroup"
+import (
+	"gmf/src/common/config"
+	"golang.org/x/sync/errgroup"
+)
 
 type ServerIFace interface {
-	Run() error
+	Run(*config.Config) error
 	Name() string
 	ErrGroup() *errgroup.Group
 }

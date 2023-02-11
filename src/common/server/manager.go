@@ -2,6 +2,8 @@ package server
 
 import (
 	"errors"
+	"fmt"
+	"gmf/src/common/config"
 )
 
 type Manager struct {
@@ -23,13 +25,16 @@ func (sm *Manager) Register(servers ...ServerIFace) *Manager {
 	return sm
 
 }
-func (sm *Manager) Run(name string) error {
+func (sm *Manager) Run(name string, config *config.Config) error {
 	hasFound := false
 	for _, s := range sm.servers {
 		if s.Name() == name {
-			s.Run()
 			s.ErrGroup().Go(func() error {
-				return s.Run()
+				err := s.Run(config)
+				if err != nil {
+					fmt.Println("Run Server Error:", err)
+				}
+				return err
 			})
 			hasFound = true
 		}
@@ -39,11 +44,11 @@ func (sm *Manager) Run(name string) error {
 	}
 	return nil
 }
-func (sm *Manager) RunAll() {
+func (sm *Manager) RunAll(config *config.Config) {
 	for _, s := range sm.servers {
 
 		s.ErrGroup().Go(func() error {
-			return s.Run()
+			return s.Run(config)
 		})
 	}
 }

@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/afex/hystrix-go/hystrix"
 	"github.com/micro/go-micro/v2/client"
-	"gmf/src/gateway/services"
+	"gmf/src/servers/task/services"
 	"strconv"
 )
 

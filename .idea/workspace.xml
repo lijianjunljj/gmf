@@ -5,15 +5,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e763b753-fc21-44de-a21c-748f93c9bd73" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/server/interface.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/server/manager.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/development.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/config/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/config/etcd.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/config/web.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/utils/filepath.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servers/servers.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/version.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/version.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/start.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/start.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etcd/etcd-v3.5.1-windows-amd64/default.etcd/member/snap/db" beforeDir="false" afterPath="$PROJECT_DIR$/etcd/etcd-v3.5.1-windows-amd64/default.etcd/member/snap/db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etcd/etcd-v3.5.1-windows-amd64/default.etcd/member/wal/0000000000000000-0000000000000000.wal" beforeDir="false" afterPath="$PROJECT_DIR$/etcd/etcd-v3.5.1-windows-amd64/default.etcd/member/wal/0000000000000000-0000000000000000.wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/server.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/parser/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/config/parser/interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/parser/yamlParser.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/config/parser/yamlParser.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/server/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/server/manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/manager.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gateway/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/services/proto/taskModels.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/services/proto/taskService.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/services/proto/userModels.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/services/proto/userService.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/services/taskModels.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/services/taskModels.pb.micro.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/services/taskService.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/services/taskService.pb.micro.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/services/userModels.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/services/userModels.pb.micro.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/services/userService.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/services/userService.pb.micro.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/weblib/handlers/pkg.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/handlers/pkg.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/weblib/handlers/task.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/handlers/task.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/weblib/handlers/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/handlers/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/weblib/middleware/cors.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/middleware/cors.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/weblib/middleware/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/middleware/init.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/weblib/middleware/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/middleware/jwt.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/weblib/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/wrappers/taskWrapper.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/wrappers/taskWrapper.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/conf/conf.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/conf/conf.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/conf/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/conf/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/core/pkg.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/core/pkg.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/core/taskSerializer.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/core/taskSerializer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/core/taskService.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/core/taskService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/model/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/model/init.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/model/migration.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/model/migration.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/model/mq_init.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/model/mq_init.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/model/task.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/model/task.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/services/proto/taskModels.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/services/proto/taskModels.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/services/proto/taskService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/services/proto/taskService.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/services/taskModels.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/services/taskModels.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/services/taskModels.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/services/taskModels.pb.micro.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/services/taskService.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/services/taskService.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/services/taskService.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/services/taskService.pb.micro.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/conf/conf.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/conf/conf.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/conf/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/conf/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/core/pkg.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/core/pkg.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/core/userService.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/core/userService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/model/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/model/init.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/model/migration.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/model/migration.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/model/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/services/protos/userModels.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/services/protos/userModels.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/services/protos/userService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/services/protos/userService.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/services/userModels.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/services/userModels.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/services/userModels.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/services/userModels.pb.micro.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/services/userService.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/services/userService.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/services/userService.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/services/userService.pb.micro.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +94,10 @@
     <setting file="file://$PROJECT_DIR$/go.mod" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/main.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/common/server/manager.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/user/conf/conf.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/user/core/pkg.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/user/core/userService.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/user/server.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/servers/user/conf/conf.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/servers/user/core/pkg.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/servers/user/core/userService.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/servers/user/server.go" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -63,7 +121,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/go_projects/gmf/src/common/config&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/go_projects/gmf/src/common/utils&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -72,33 +130,16 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\go_projects\gmf\src\common\utils" />
       <recent name="E:\go_projects\gmf\src\common\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\go_projects\gmf\src\servers" />
       <recent name="E:\go_projects\gmf\src\common\server" />
       <recent name="E:\go_projects\gmf\src\common" />
       <recent name="E:\go_projects\gmf\src" />
       <recent name="E:\go_projects\gmf\src\common\config\parser" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="gmf" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="gmf" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
