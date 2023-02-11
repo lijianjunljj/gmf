@@ -5,28 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e763b753-fc21-44de-a21c-748f93c9bd73" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/config/servers.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/config/parser/jsonParser.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/config/service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gateway/web/web.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/start.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/start.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/development.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/development.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/etcd/etcd-v3.5.1-windows-amd64/default.etcd/member/snap/db" beforeDir="false" afterPath="$PROJECT_DIR$/etcd/etcd-v3.5.1-windows-amd64/default.etcd/member/snap/db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/etcd/etcd-v3.5.1-windows-amd64/default.etcd/member/wal/0000000000000000-0000000000000000.wal" beforeDir="false" afterPath="$PROJECT_DIR$/etcd/etcd-v3.5.1-windows-amd64/default.etcd/member/wal/0000000000000000-0000000000000000.wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/config/parser/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/config/parser/interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/config/parser/yamlParser.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/config/parser/yamlParser.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/server/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/serverIFace.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/server/manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/manager.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/web/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/servers.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/servers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/user/conf/conf.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/user/conf/config.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/user/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
