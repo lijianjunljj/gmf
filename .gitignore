@@ -20,3 +20,4 @@ task/go.sum
 .idea
 api-gateway/runtime
 rabbitmq-server-3.11.8.exe
+main.exe
