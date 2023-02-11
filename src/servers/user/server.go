@@ -27,7 +27,7 @@ func (s *Server) GetServiceName() string {
 	return s.Server.ServiceName
 }
 func (s *Server) RegisterServiceHandlerFunc() error {
-	s.ServiceCallFunc = func(microService micro.Service) {
+	s.Server.ServiceCallFunc = func(microService micro.Service) {
 		_ = services.RegisterUserServiceHandler(microService.Server(), new(core.UserService))
 	}
 	return nil
