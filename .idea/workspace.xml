@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e763b753-fc21-44de-a21c-748f93c9bd73" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/config/const.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/db/factory.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/db/interface.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/db/mysql.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/db/sqlite.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/loger/loger.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/utils/time.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servers/register.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/start.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/start.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/development.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/development.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/config/mysql.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/config/mysql.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/server/manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/manager.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/server/serverIFace.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/serverIFace.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/web/handlers/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/handlers/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/web/middleware/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/middleware/init.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/web/web.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/web.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/wrappers/taskWrapper.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/task/wrappers/taskWrapper.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/wrappers/userWrapper.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/wrappers/userWrapper.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/servers.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/servers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/user/core/pkg.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/user/core/userService.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/core/userService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/user/model/init.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/user/model/migration.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/user/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/server.go" afterDir="false" />
-    </list>
+    <list default="true" id="e763b753-fc21-44de-a21c-748f93c9bd73" name="变更" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
