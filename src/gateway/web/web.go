@@ -1,26 +1,28 @@
 package web
 
 import (
+	"fmt"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
 	"gmf/src/gateway/web/middleware"
 )
 
-func NewRouter(service ...interface{}) *gin.Engine {
+func NewRouter(service []interface{}) *gin.Engine {
+	fmt.Println("service2:", service)
 	ginRouter := gin.Default()
 	ginRouter.Use(middleware.Cors(), middleware.InitMiddleware(service), middleware.ErrorMiddleware())
 	store := cookie.NewStore([]byte("something-very-secret"))
 	ginRouter.Use(sessions.Sessions("mysession", store))
-	v1 := ginRouter.Group("/api/v1")
+	root := ginRouter.Group("/")
 	{
-		v1.GET("ping", func(context *gin.Context) {
+		root.GET("ping", func(context *gin.Context) {
 			context.JSON(200, "success")
 		})
 
-		UnAuthedRouter(v1)
+		UnAuthedRouter(root)
 		// 需要登录保护
-		authed := v1.Group("/")
+		authed := root.Group("/")
 		authed.Use(middleware.JWT())
 		{
 			AuthedRouter(authed)

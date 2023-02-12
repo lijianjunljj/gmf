@@ -24,7 +24,7 @@ func UserLogin(ginCtx *gin.Context) {
 	var userReq services.UserRequest
 	PanicIfUserError(ginCtx.Bind(&userReq))
 	// 从gin.Key中取出服务实例
-	userService := ginCtx.Keys["userService"].(services.UserService)
+	userService := ginCtx.Keys["UserService"].(services.UserService)
 	userResp, err := userService.UserLogin(context.Background(), &userReq)
 	PanicIfUserError(err)
 	token, err := utils.GenerateToken(uint(userResp.UserDetail.ID))

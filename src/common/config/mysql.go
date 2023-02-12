@@ -2,12 +2,16 @@ package config
 
 type MysqlOption func(o *MysqlOptions)
 type MysqlOptions struct {
-	Db         string
-	DbHost     string
-	DbPort     string
-	DbUser     string
-	DbPassWord string
-	DbName     string
+	Db               string
+	DbHost           string
+	DbPort           string
+	DbUser           string
+	DbPassWord       string
+	DbName           string
+	MysqlTimeout     string
+	MysqlLifeTimeout int
+	MysqlMaxOpenCons int
+	MysqlMaxIdleCons int
 }
 
 func NewMysqlOptions(opts ...MysqlOption) MysqlOptions {

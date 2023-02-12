@@ -3,10 +3,14 @@ package core
 import (
 	"context"
 	"errors"
-	"github.com/jinzhu/gorm"
+	"gmf/src/common/db"
 	"gmf/src/servers/user/model"
 	"gmf/src/servers/user/services"
+	"gorm.io/gorm"
 )
+
+type UserService struct {
+}
 
 func BuildUser(item model.User) *services.UserModel {
 	userModel := services.UserModel{
@@ -21,8 +25,8 @@ func BuildUser(item model.User) *services.UserModel {
 func (*UserService) UserLogin(ctx context.Context, req *services.UserRequest, resp *services.UserDetailResponse) error {
 	var user model.User
 	resp.Code = 200
-	if err := model.DB.Where("user_name=?", req.UserName).First(&user).Error; err != nil {
-		if gorm.IsRecordNotFoundError(err) {
+	if err := db.GetDB().Where("user_name=?", req.UserName).First(&user).Error; err != nil {
+		if err == gorm.ErrRecordNotFound {
 			resp.Code = 400
 			return nil
 		}
@@ -42,8 +46,8 @@ func (*UserService) UserRegister(ctx context.Context, req *services.UserRequest,
 		err := errors.New("两次密码输入不一致")
 		return err
 	}
-	count := 0
-	if err := model.DB.Model(&model.User{}).Where("user_name=?", req.UserName).Count(&count).Error; err != nil {
+	var count int64 = 0
+	if err := db.GetDB().Model(&model.User{}).Where("user_name=?", req.UserName).Count(&count).Error; err != nil {
 		return err
 	}
 	if count > 0 {
@@ -57,7 +61,7 @@ func (*UserService) UserRegister(ctx context.Context, req *services.UserRequest,
 	if err := user.SetPassword(req.Password); err != nil {
 		return err
 	}
-	if err := model.DB.Create(&user).Error; err != nil {
+	if err := db.GetDB().Create(&user).Error; err != nil {
 		return err
 	}
 	resp.UserDetail = BuildUser(user)

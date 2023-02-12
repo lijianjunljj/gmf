@@ -2,9 +2,7 @@ package servers
 
 import (
 	"fmt"
-	"github.com/micro/go-micro/v2"
 	"gmf/src/common/server"
-	"gmf/src/servers/user"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -16,12 +14,12 @@ func init() {
 }
 func Register(g *errgroup.Group) {
 	fmt.Println("Register...........")
-	smp.Register(user.NewServer(g))
+	RegisterServers(g)
 }
 
-func Client(serverName string, option micro.Option) interface{} {
-	return smp.Client(serverName, option)
+func Client(serverName string) interface{} {
+	return smp.Client(serverName)
 }
-func Clients(option micro.Option) []interface{} {
-	return smp.Clients(option)
+func Clients() []interface{} {
+	return smp.Clients()
 }

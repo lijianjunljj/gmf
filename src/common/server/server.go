@@ -6,6 +6,7 @@ import (
 	"github.com/micro/go-micro/v2/registry"
 	"github.com/micro/go-micro/v2/registry/etcd"
 	"gmf/src/common/config"
+	commondb "gmf/src/common/db"
 	"gmf/src/servers/user/services"
 	"golang.org/x/sync/errgroup"
 )
@@ -17,6 +18,7 @@ type Server struct {
 	Config          *config.Config
 	Name            string
 	ServiceName     string
+	ClientService   micro.Service
 }
 
 func (s *Server) BeforeRun(config *config.Config) micro.Service {
@@ -27,7 +29,7 @@ func (s *Server) BeforeRun(config *config.Config) micro.Service {
 	etcdReg := s.EtcdReg(s.Config.Etcd)
 	// 得到一个微服务实例
 	microService := micro.NewService(
-		micro.Name(s.Config.Service.ServiceName), // 微服务名字
+		micro.Name(s.ServiceName), // 微服务名字
 		micro.Address(s.Config.Service.Address),
 		micro.Registry(etcdReg), // etcd注册件
 	)
@@ -38,9 +40,11 @@ func (s *Server) BeforeRun(config *config.Config) micro.Service {
 }
 
 func (s *Server) Run(config *config.Config) error {
+	commondb.Init(config.DbType, func() interface{} {
+		return config.Mysql
+	})
 	microService := s.BeforeRun(config)
 	// 服务注册
-
 	if s.ServiceCallFunc != nil {
 		s.ServiceCallFunc(microService)
 	}
@@ -56,21 +60,9 @@ func (s *Server) GetConfig() *config.Config {
 	return s.Config
 }
 
-func (s *Server) ServiceClient(option micro.Option) interface{} {
-	fmt.Println("ServiceClient...", s)
-	fmt.Printf("s type %T \n", s)
-	serverName := s.Name
-	fmt.Println("serverName:", serverName)
-	serviceName := s.ServiceName
-	fmt.Println("serviceName:", serviceName)
-	userMicroService := micro.NewService(
-		micro.Name(serviceName+".client"),
-		option, //micro.WrapClient(wrappers.NewUserWrapper),
-	)
+func (s *Server) ServiceClient() interface{} {
+	return services.NewUserService(s.ServiceName, s.ClientService.Client())
 
-	// 用户服务调用实例
-	userService := services.NewUserService(s.ServiceName, userMicroService.Client())
-	return userService
 }
 
 func (s *Server) EtcdReg(options *config.EtcdOptions) registry.Registry {

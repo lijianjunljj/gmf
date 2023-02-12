@@ -37,6 +37,7 @@ to quickly create a Cobra application.`,
 			yamlParser := parser.NewYamlParser(configFile)
 			yamlParser.Parse()
 			config := config.NewConfig(yamlParser)
+			config.InitDbType()
 			config.InitMysql()
 			config.InitEtcd()
 			config.InitWeb()
@@ -44,7 +45,7 @@ to quickly create a Cobra application.`,
 				server.StartAll(config)
 			} else {
 				if serverName == "gateway" {
-					gateway.GetInstance(nil).Run(config)
+					gateway.Start(config)
 				} else {
 					server.Start(serverName, config)
 				}

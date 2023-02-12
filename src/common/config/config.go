@@ -10,6 +10,7 @@ type Config struct {
 	Web     *WebOptions
 	Service *ServiceOptions
 	parser  parser.Parser
+	DbType  string
 }
 
 func NewConfig(parser parser.Parser) *Config {
@@ -36,15 +37,17 @@ func (c *Config) InitService(serverName string) {
 }
 
 func (c *Config) InitWeb() {
-	protocol := c.parser.GetString("web", "protocol")
-	addr := c.parser.GetString("web", "addr")
+	protocol := c.parser.GetString("gateway", "protocol")
+	addr := c.parser.GetString("gateway", "addr")
 	//fmt.Println("protocol", protocol)
 	//fmt.Println("addr", addr)
 	webConf := NewWebOptions(Protocol(protocol), Addr(addr))
 	//fmt.Println("webConf:", webConf)
 	c.Web = &webConf
 }
-
+func (c *Config) InitDbType() {
+	c.DbType = c.parser.GetString("db_type")
+}
 func (c *Config) InitMysql() {
 	//fmt.Println("c.parser", c.parser)
 	db := c.parser.GetString("mysql", "Db")

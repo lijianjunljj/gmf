@@ -10,7 +10,7 @@ import (
 
 func main() {
 	var g errgroup.Group
-	gateway.GetInstance(&g)
+	gateway.Register(&g)
 	servers.Register(&g)
 	cmd.Execute()
 	if err := g.Wait(); err != nil {

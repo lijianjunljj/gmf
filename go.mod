@@ -17,4 +17,6 @@ require (
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e
 	google.golang.org/protobuf v1.26.0
 	gopkg.in/ini.v1 v1.66.2
+	gorm.io/driver/mysql v1.4.6
+	gorm.io/gorm v1.24.5
 )

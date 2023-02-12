@@ -12,7 +12,8 @@ type ServerIFace interface {
 	Run(*config.Config) error
 	GetName() string
 	GetServiceName() string
-	ServiceClient(micro.Option) interface{}
+	ServiceClient() interface{}
+	RegisterServiceHandlerFunc() error
 	ErrGroup() *errgroup.Group
 	EtcdReg(*config.EtcdOptions) registry.Registry
 }

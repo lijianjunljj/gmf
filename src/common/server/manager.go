@@ -3,7 +3,6 @@ package server
 import (
 	"errors"
 	"fmt"
-	"github.com/micro/go-micro/v2"
 	"gmf/src/common/config"
 )
 
@@ -16,25 +15,27 @@ func (sm *Manager) Init() *Manager {
 	return sm
 }
 
-func (sm *Manager) Client(serverName string, option micro.Option) interface{} {
+func (sm *Manager) Client(serverName string) interface{} {
 	for _, server := range sm.servers {
 		fmt.Println("Client", server.GetName(), serverName)
 		if server.GetName() == serverName {
 			fmt.Println("ServiceName", server.GetServiceName())
 			fmt.Println("server", server)
 			fmt.Printf("server type %T\n", server)
-			return server.ServiceClient(option)
+			return server.ServiceClient()
 		}
 	}
 	return nil
 }
 
-func (sm *Manager) Clients(option micro.Option) []interface{} {
+func (sm *Manager) Clients() []interface{} {
 	var clients []interface{}
 	for _, server := range sm.servers {
-		client := server.ServiceClient(option)
+		client := server.ServiceClient()
+		fmt.Println("clientS:", client)
 		clients = append(clients, client)
 	}
+	fmt.Println("clients:", clients)
 	return clients
 }
 
