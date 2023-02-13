@@ -33,17 +33,3 @@ func NewClientService(s *server.Server) micro.Service {
 		micro.WrapClient(wrappers.NewUserWrapper),
 	)
 }
-
-//type Server struct {
-//	server.Server
-//}
-
-//func (s *Server) GetName() string {
-//	return s.Server.Name
-//}
-//
-//// 用户服务调用实例
-//
-//func (s *Server) GetServiceName() string {
-//	return s.Server.ServiceName
-//}

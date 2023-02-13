@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e763b753-fc21-44de-a21c-748f93c9bd73" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/src/common/wrapper/wrapper.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/development.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/development.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servers/servers.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/servers.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servers/user/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servers/user/wrappers/userWrapper.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/wrappers/userWrapper.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

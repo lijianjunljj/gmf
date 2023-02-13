@@ -1,7 +1,6 @@
 service:
   AppMode: debug
   HttpPort: :3000
-
 db_type: mysql
 mysql:
   Db: mysql
