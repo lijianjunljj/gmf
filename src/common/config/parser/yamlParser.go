@@ -35,3 +35,8 @@ func (i *YamlParser) GetString(keys ...string) string {
 	val, _ := i.file.String(key)
 	return val
 }
+func (i *YamlParser) GetInt(keys ...string) int {
+	key := strings.Join(keys, ".")
+	val, _ := i.file.Int(key)
+	return val
+}

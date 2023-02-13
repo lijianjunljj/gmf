@@ -22,27 +22,20 @@ func NewConfig(parser parser.Parser) *Config {
 }
 func (c *Config) InitEtcd() {
 	registryAddr := c.parser.GetString("etcd", "registryAddr")
-	//fmt.Println("registryAddr", registryAddr)
 	etcdConf := NewEtcdOptions(RegistryAddr(registryAddr))
-	//fmt.Println("etcdConf:", etcdConf)
 	c.Etcd = &etcdConf
 }
 func (c *Config) InitService(serverName string) {
 	serviceName := c.parser.GetString("servers", serverName, "serviceName")
 	address := c.parser.GetString("servers", serverName, "address")
-	//fmt.Println("serviceName", serviceName)
 	serviceConf := NewServiceOptions(ServiceName(serviceName), Address(address))
-	//fmt.Println("serviceConf:", serviceConf)
 	c.Service = &serviceConf
 }
 
 func (c *Config) InitWeb() {
 	protocol := c.parser.GetString("gateway", "protocol")
 	addr := c.parser.GetString("gateway", "addr")
-	//fmt.Println("protocol", protocol)
-	//fmt.Println("addr", addr)
 	webConf := NewWebOptions(Protocol(protocol), Addr(addr))
-	//fmt.Println("webConf:", webConf)
 	c.Web = &webConf
 }
 func (c *Config) InitDbType() {
@@ -57,8 +50,14 @@ func (c *Config) InitMysql() {
 	dbName := c.parser.GetString("mysql", "DbName")
 	dbUser := c.parser.GetString("mysql", "DbUser")
 	dbPassWord := c.parser.GetString("mysql", "DbPassWord")
+	mysqlTimeout := c.parser.GetString("mysql", "MysqlTimeout")
+	mysqlLifeTimeout := c.parser.GetInt("mysql", "MysqlLifeTimeout")
+	mysqlMaxOpenCons := c.parser.GetInt("mysql", "MysqlMaxOpenCons")
+	mysqlMaxIdleCons := c.parser.GetInt("mysql", "MysqlMaxIdleCons")
 	mysqlConf := NewMysqlOptions(Db(db), DbHost(dbHost), DbPort(dbPort),
-		DbUser(dbUser), DbPassWord(dbPassWord), DbName(dbName))
+		DbUser(dbUser), DbPassWord(dbPassWord), DbName(dbName), MysqlTimeout(mysqlTimeout),
+		MysqlLifeTimeout(mysqlLifeTimeout), MysqlMaxOpenCons(mysqlMaxOpenCons), MysqlMaxIdleCons(mysqlMaxIdleCons),
+	)
 	//fmt.Println("mysqlConf:", mysqlConf)
 	c.Mysql = &mysqlConf
 }

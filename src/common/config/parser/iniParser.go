@@ -29,3 +29,7 @@ func (i *IniParser) Parse() error {
 func (i *IniParser) GetString(sec string, key string) string {
 	return i.file.Section(sec).Key(key).String()
 }
+func (i *IniParser) GetInt(sec string, key string) int {
+	v, _ := i.file.Section(sec).Key(key).Int()
+	return v
+}

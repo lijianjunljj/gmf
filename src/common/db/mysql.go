@@ -26,9 +26,9 @@ func (my *Mysql) Connect() *gorm.DB {
 	maxopenconns := my.config.MysqlMaxOpenCons
 	maxidleconns := my.config.MysqlMaxIdleCons
 	lifeTime := my.config.MysqlLifeTimeout
-	//fmt.Println(timeout, maxopenconns, maxidleconns, lifeTime)
-	var link = my.config.DbUser + ":" + my.config.DbPassWord + "@tcp(" + my.config.DbHost + ":" + my.config.DbPort + ")/" + my.config.DbPassWord + "?charset=utf8&parseTime=True&loc=Local&interpolateParams=true&timeout=" + timeout
-	//fmt.Println(link)
+	fmt.Println(timeout, maxopenconns, maxidleconns, lifeTime)
+	var link = my.config.DbUser + ":" + my.config.DbPassWord + "@tcp(" + my.config.DbHost + ":" + my.config.DbPort + ")/" + my.config.DbName + "?charset=utf8&parseTime=True&loc=Local&interpolateParams=true&timeout=" + timeout
+	fmt.Println(link)
 	comLoger, _ := commonLoger.NewLoger("", log.LstdFlags, func() string {
 		now := time.Now()
 		filename := fmt.Sprintf("my_%d%02d%02d_%02d_%02d_%02d.log",
@@ -64,6 +64,7 @@ func (my *Mysql) Connect() *gorm.DB {
 	sqlDB.SetConnMaxLifetime(time.Duration(lifeTime) * time.Second)
 	sqlDB.SetMaxOpenConns(maxopenconns) //设置数据库连接池最大连接数
 	sqlDB.SetMaxIdleConns(maxidleconns)
+	my.MysqlDB = db
 	return db
 }
 func (my *Mysql) DB() *gorm.DB {

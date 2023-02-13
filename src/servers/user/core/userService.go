@@ -3,6 +3,7 @@ package core
 import (
 	"context"
 	"errors"
+	"fmt"
 	"gmf/src/common/db"
 	"gmf/src/servers/user/model"
 	"gmf/src/servers/user/services"
@@ -26,8 +27,10 @@ func (*UserService) UserLogin(ctx context.Context, req *services.UserRequest, re
 	var user model.User
 	resp.Code = 200
 	if err := db.GetDB().Where("user_name=?", req.UserName).First(&user).Error; err != nil {
+		fmt.Println("err l:", err)
 		if err == gorm.ErrRecordNotFound {
 			resp.Code = 400
+			fmt.Println("resp.Code:", resp.Code)
 			return nil
 		}
 		resp.Code = 500

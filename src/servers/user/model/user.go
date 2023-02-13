@@ -15,6 +15,10 @@ const (
 	PassWordCost = 12 // 密码加密难度
 )
 
+func (user *User) TableName() string {
+	return "user"
+}
+
 // 加密密码
 func (user *User) SetPassword(password string) error {
 	bytes, err := bcrypt.GenerateFromPassword([]byte(password), PassWordCost)

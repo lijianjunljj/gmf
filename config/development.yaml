@@ -10,6 +10,10 @@ mysql:
   DbUser: root
   DbPassWord: root
   DbName: micro_todolist
+  MysqlTimeout: 10s
+  MysqlLifeTimeout: 28700
+  MysqlMaxOpenCons:   100
+  MysqlMaxIdleCons:   100
 etcd:
   registryAddr: 127.0.0.1:2379
 gateway:

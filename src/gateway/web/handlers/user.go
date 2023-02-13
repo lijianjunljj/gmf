@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"context"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"gmf/src/gateway/common/utils"
 	"gmf/src/servers/user/services"
@@ -26,14 +27,24 @@ func UserLogin(ginCtx *gin.Context) {
 	// 从gin.Key中取出服务实例
 	userService := ginCtx.Keys["UserService"].(services.UserService)
 	userResp, err := userService.UserLogin(context.Background(), &userReq)
+	fmt.Println("UserLogin:", userResp, err)
 	PanicIfUserError(err)
-	token, err := utils.GenerateToken(uint(userResp.UserDetail.ID))
-	ginCtx.JSON(http.StatusOK, gin.H{
-		"code": userResp.Code,
-		"msg":  "成功",
-		"data": gin.H{
-			"user":  userResp.UserDetail,
-			"token": token,
-		},
-	})
+	fmt.Println("11111:")
+	if userResp.UserDetail != nil {
+		token, err := utils.GenerateToken(uint(userResp.UserDetail.ID))
+		fmt.Println("token, err:", token, err)
+		ginCtx.JSON(http.StatusOK, gin.H{
+			"code": userResp.Code,
+			"msg":  "成功",
+			"data": gin.H{
+				"user":  userResp.UserDetail,
+				"token": token,
+			},
+		})
+	} else {
+		ginCtx.JSON(http.StatusOK, gin.H{
+			"code": userResp.Code,
+			"msg":  "失败",
+		})
+	}
 }

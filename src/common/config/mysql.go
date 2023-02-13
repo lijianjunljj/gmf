@@ -21,6 +21,31 @@ func NewMysqlOptions(opts ...MysqlOption) MysqlOptions {
 	}
 	return opt
 }
+
+func MysqlMaxIdleCons(v int) MysqlOption {
+	return func(o *MysqlOptions) {
+		o.MysqlMaxIdleCons = v
+	}
+}
+
+func MysqlMaxOpenCons(v int) MysqlOption {
+	return func(o *MysqlOptions) {
+		o.MysqlMaxOpenCons = v
+	}
+}
+
+func MysqlLifeTimeout(v int) MysqlOption {
+	return func(o *MysqlOptions) {
+		o.MysqlLifeTimeout = v
+	}
+}
+
+func MysqlTimeout(v string) MysqlOption {
+	return func(o *MysqlOptions) {
+		o.MysqlTimeout = v
+	}
+}
+
 func Db(v string) MysqlOption {
 	return func(o *MysqlOptions) {
 		o.Db = v
