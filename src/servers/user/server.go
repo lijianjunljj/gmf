@@ -4,6 +4,7 @@ import (
 	"github.com/micro/go-micro/v2"
 	"gmf/src/common/server"
 	"gmf/src/servers/user/core"
+	"gmf/src/servers/user/router"
 	"gmf/src/servers/user/services"
 	"gmf/src/servers/user/wrappers"
 	"golang.org/x/sync/errgroup"
@@ -17,6 +18,7 @@ func NewServer(g *errgroup.Group) *Server {
 		micro.Name(s.Server.ServiceName+".client"),
 		micro.WrapClient(wrappers.NewUserWrapper),
 	)
+	s.Server.WebRouter = new(router.Router)
 	s.Server.ServiceCallFunc = func(microService micro.Service) {
 		_ = services.RegisterUserServiceHandler(microService.Server(), new(core.UserService))
 	}

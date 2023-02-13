@@ -6,6 +6,7 @@ import (
 	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
 	"gmf/src/gateway/web/middleware"
+	"gmf/src/servers"
 )
 
 func NewRouter(service []interface{}) *gin.Engine {
@@ -19,13 +20,17 @@ func NewRouter(service []interface{}) *gin.Engine {
 		root.GET("ping", func(context *gin.Context) {
 			context.JSON(200, "success")
 		})
-
-		UnAuthedRouter(root)
+		routers := servers.Routers()
+		for _, v := range routers {
+			v.InAuthentic(root)
+		}
 		// 需要登录保护
 		authed := root.Group("/")
 		authed.Use(middleware.JWT())
 		{
-			AuthedRouter(authed)
+			for _, v := range routers {
+				v.Authentic(authed)
+			}
 		}
 	}
 	return ginRouter

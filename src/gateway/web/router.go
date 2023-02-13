@@ -6,9 +6,7 @@ import (
 )
 
 func UnAuthedRouter(v1 *gin.RouterGroup) {
-	// 用户服务
-	v1.POST("/user/register", handlers.UserRegister)
-	v1.POST("/user/login", handlers.UserLogin)
+
 }
 
 func AuthedRouter(authed *gin.RouterGroup) {

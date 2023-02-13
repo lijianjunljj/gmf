@@ -7,18 +7,20 @@ import (
 	"github.com/micro/go-micro/v2/registry/etcd"
 	"gmf/src/common/config"
 	commondb "gmf/src/common/db"
+	"gmf/src/common/router"
 	"gmf/src/servers/user/services"
 	"golang.org/x/sync/errgroup"
 )
 
 type Server struct {
-	ServerIFace
+	AbstractServer
 	G               *errgroup.Group
 	ServiceCallFunc func(microService micro.Service)
 	Config          *config.Config
 	Name            string
 	ServiceName     string
 	ClientService   micro.Service
+	WebRouter       router.AbstractRouter
 }
 
 func (s *Server) BeforeRun(config *config.Config) micro.Service {
@@ -37,6 +39,9 @@ func (s *Server) BeforeRun(config *config.Config) micro.Service {
 	microService.Init()
 
 	return microService
+}
+func (s *Server) GetWebRouter() router.AbstractRouter {
+	return s.WebRouter
 }
 
 func (s *Server) Run(config *config.Config) error {

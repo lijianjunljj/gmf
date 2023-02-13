@@ -4,14 +4,15 @@ import (
 	"errors"
 	"fmt"
 	"gmf/src/common/config"
+	"gmf/src/common/router"
 )
 
 type Manager struct {
-	servers map[string]ServerIFace
+	servers map[string]AbstractServer
 }
 
 func (sm *Manager) Init() *Manager {
-	sm.servers = make(map[string]ServerIFace)
+	sm.servers = make(map[string]AbstractServer)
 	return sm
 }
 
@@ -28,6 +29,17 @@ func (sm *Manager) Client(serverName string) interface{} {
 	return nil
 }
 
+func (sm *Manager) Routers() []router.AbstractRouter {
+	var routers []router.AbstractRouter
+	for _, server := range sm.servers {
+		router := server.GetWebRouter()
+		fmt.Println("routers:", router)
+		routers = append(routers, router)
+	}
+	fmt.Println("routers:", routers)
+	return routers
+}
+
 func (sm *Manager) Clients() []interface{} {
 	var clients []interface{}
 	for _, server := range sm.servers {
@@ -39,7 +51,7 @@ func (sm *Manager) Clients() []interface{} {
 	return clients
 }
 
-func (sm *Manager) Register(servers ...ServerIFace) *Manager {
+func (sm *Manager) Register(servers ...AbstractServer) *Manager {
 	for _, server := range servers {
 		serverName := server.GetName()
 		serviceName := server.GetServiceName()

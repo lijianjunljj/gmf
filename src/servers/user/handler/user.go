@@ -1,9 +1,11 @@
-package handlers
+package handler
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"gmf/src/gateway/common/logging"
 	"gmf/src/gateway/common/utils"
 	"gmf/src/servers/user/services"
 	"net/http"
@@ -18,6 +20,13 @@ func UserRegister(ginCtx *gin.Context) {
 	userResp, err := userService.UserRegister(context.Background(), &userReq)
 	PanicIfUserError(err)
 	ginCtx.JSON(http.StatusOK, gin.H{"data": userResp})
+}
+func PanicIfUserError(err error) {
+	if err != nil {
+		err = errors.New("userService--" + err.Error())
+		logging.Info(err)
+		panic(err)
+	}
 }
 
 // 用户登录

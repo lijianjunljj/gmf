@@ -2,6 +2,7 @@ package servers
 
 import (
 	"fmt"
+	"gmf/src/common/router"
 	"gmf/src/common/server"
 	"golang.org/x/sync/errgroup"
 )
@@ -22,4 +23,7 @@ func Client(serverName string) interface{} {
 }
 func Clients() []interface{} {
 	return smp.Clients()
+}
+func Routers() []router.AbstractRouter {
+	return smp.Routers()
 }
