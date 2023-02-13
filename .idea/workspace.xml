@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e763b753-fc21-44de-a21c-748f93c9bd73" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/router/interface.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servers/user/router/router.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/server/manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/manager.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/server/serverIFace.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/web/handlers/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/handler/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/web/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/web/web.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/web.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/servers.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/servers.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servers/user/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -64,6 +64,13 @@ func (s *Server) ErrGroup() *errgroup.Group {
 func (s *Server) GetConfig() *config.Config {
 	return s.Config
 }
+func (s *Server) GetName() string {
+	return s.Name
+}
+
+func (s *Server) GetServiceName() string {
+	return s.ServiceName
+}
 
 func (s *Server) ServiceClient() interface{} {
 	return services.NewUserService(s.ServiceName, s.ClientService.Client())
