@@ -15,7 +15,7 @@ go build -o gmf.exe main.go //编译
 windows版本etcd快速下载地址：链接: https://pan.baidu.com/s/1RO6kwp8WNWhKga8J6PCYoA?pwd=gmf1 提取码: gmf1  
 windows版本etcdkeeper快速下载地址：链接: https://pan.baidu.com/s/1KK0UT5Itd4ijJKCjlRhNGg?pwd=gmf1 提取码: gmf1  
 运行etcd.exe  
-运行etcdkeeper.exe 输入http://127.0.0.1:8080/etcdkeeper/可以查看已经启动和注册的微服务  
+运行etcdkeeper.exe 输入http://127.0.0.1:8080/etcdkeeper/ 可以查看已经启动和注册的微服务  
 三、启动网关  
 windows:.\gmf.exe start --name gateway  --config .\config\development.yaml  
 linux:  
