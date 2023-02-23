@@ -7,7 +7,7 @@ go语言微服务框架
 四、易使用，提供命令行工具，一条指令创建一个微服务  
 快速开始：  
 go版本1.16.2  
-#一、下载gmf框架  
+**一、下载gmf框架**  
 git clone https://github.com/lijianjunljj/gmf.git  
 go mod tidy //下载依赖包  
 go build -o gmf.exe main.go //编译  
