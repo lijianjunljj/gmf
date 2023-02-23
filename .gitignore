@@ -23,3 +23,4 @@ rabbitmq-server-3.11.8.exe
 main.exe
 etcdkeeper
 etcd
+runtime/logs/*

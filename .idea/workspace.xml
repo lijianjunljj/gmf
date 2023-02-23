@@ -5,45 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e763b753-fc21-44de-a21c-748f93c9bd73" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/development.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/development.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/servers.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/db/factory.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/db/factory.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/db/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/db/interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/db/mysql.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/db/mysql.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/server/manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/manager.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/server/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/web/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateway/web/web.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/web/web.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mq-server/conf/conf.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mq-server/conf/config.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mq-server/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mq-server/model/mq_init.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mq-server/model/mysql_init.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mq-server/model/task.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mq-server/service/task.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/register.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/register.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/servers.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/servers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/conf/conf.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/conf/config.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/core/pkg.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/core/taskSerializer.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/core/taskService.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/model/init.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/model/migration.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/model/mq_init.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/model/task.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/server.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/services/proto/taskModels.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/services/proto/taskService.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/services/taskModels.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/services/taskModels.pb.micro.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/services/taskService.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/services/taskService.pb.micro.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/task/wrappers/taskWrapper.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/user/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/handler/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20230210.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20230211.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20230212.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20230213.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20230223.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20230224.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
