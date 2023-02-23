@@ -6,22 +6,18 @@ import (
 	"golang.org/x/sync/errgroup"
 )
 
-var smp *server.Manager
+var serverManager *server.Manager
 
 func init() {
-	smp = server.Init()
+	serverManager = server.Init()
 }
 func Register(g *errgroup.Group) {
 	RegisterServers(g)
 }
 
-func Client(serverName string) interface{} {
-	return smp.Client(serverName)
-}
-
 func Clients() []interface{} {
-	return smp.Clients()
+	return serverManager.Clients()
 }
 func Routers() []router.AbstractRouter {
-	return smp.Routers()
+	return serverManager.Routers()
 }

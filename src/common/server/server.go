@@ -8,6 +8,7 @@ import (
 	"gmf/src/common/config"
 	commondb "gmf/src/common/db"
 	"gmf/src/common/router"
+	"gmf/src/servers/user/model"
 	"gmf/src/servers/user/services"
 	"golang.org/x/sync/errgroup"
 )
@@ -47,7 +48,7 @@ func (s *Server) GetWebRouter() router.AbstractRouter {
 func (s *Server) Run(config *config.Config) error {
 	commondb.Init(config.DbType, func() interface{} {
 		return config.Mysql
-	})
+	}, &model.User{})
 	microService := s.BeforeRun(config)
 	// 服务注册
 	if s.ServiceCallFunc != nil {

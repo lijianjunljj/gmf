@@ -93,9 +93,9 @@ func (my *Mysql) DB() *gorm.DB {
 }
 
 //AutoMigrate Mysql数据库自动同步结构体
-func (my *Mysql) AutoMigrate(db *gorm.DB, dst ...interface{}) {
+func (my *Mysql) AutoMigrate(dst ...interface{}) {
 	if my.AutoMigrateDisable {
 		return
 	}
-	db.Set("gorm:table_options", "ENGINE=InnoDB").AutoMigrate(dst...)
+	my.DB().Set("gorm:table_options", "ENGINE=InnoDB").AutoMigrate(dst...)
 }

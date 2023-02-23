@@ -18,7 +18,7 @@ func NewRouter(service []interface{}) *gin.Engine {
 	root := ginRouter.Group("/")
 	{
 		root.GET("ping", func(context *gin.Context) {
-			context.JSON(200, "success")
+			context.JSON(200, "pong")
 		})
 		routers := servers.Routers()
 		for _, v := range routers {

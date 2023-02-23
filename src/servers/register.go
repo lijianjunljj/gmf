@@ -6,5 +6,5 @@ import (
 )
 
 func RegisterServers(g *errgroup.Group) {
-	smp.Register(user.NewServer(g))
+	serverManager.Register(user.NewServer(g))
 }

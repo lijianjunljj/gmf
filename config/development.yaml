@@ -8,7 +8,7 @@ mysql:
   DbPort: 3306
   DbUser: root
   DbPassWord: root
-  DbName: micro_todolist
+  DbName: gmf
   MysqlTimeout: 10s
   MysqlLifeTimeout: 28700
   MysqlMaxOpenCons:   100
@@ -19,6 +19,5 @@ gateway:
   addr: 127.0.0.1:4000
   protocol: http
 servers:
-  gateway:
   userServer:
     address: 127.0.0.1:8082

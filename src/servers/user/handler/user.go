@@ -14,14 +14,14 @@ import (
 // 用户注册
 func UserRegister(ginCtx *gin.Context) {
 	var userReq services.UserRequest
-	PanicIfUserError(ginCtx.Bind(&userReq))
+	PanicError(ginCtx.Bind(&userReq))
 	// 从gin.Key中取出服务实例
 	userService := ginCtx.Keys["userService"].(services.UserService)
 	userResp, err := userService.UserRegister(context.Background(), &userReq)
-	PanicIfUserError(err)
+	PanicError(err)
 	ginCtx.JSON(http.StatusOK, gin.H{"data": userResp})
 }
-func PanicIfUserError(err error) {
+func PanicError(err error) {
 	if err != nil {
 		err = errors.New("userService--" + err.Error())
 		logging.Info(err)
@@ -32,13 +32,12 @@ func PanicIfUserError(err error) {
 // 用户登录
 func UserLogin(ginCtx *gin.Context) {
 	var userReq services.UserRequest
-	PanicIfUserError(ginCtx.Bind(&userReq))
+	PanicError(ginCtx.Bind(&userReq))
 	// 从gin.Key中取出服务实例
 	userService := ginCtx.Keys["UserService"].(services.UserService)
 	userResp, err := userService.UserLogin(context.Background(), &userReq)
 	fmt.Println("UserLogin:", userResp, err)
-	PanicIfUserError(err)
-	fmt.Println("11111:")
+	PanicError(err)
 	if userResp.UserDetail != nil {
 		token, err := utils.GenerateToken(uint(userResp.UserDetail.ID))
 		fmt.Println("token, err:", token, err)

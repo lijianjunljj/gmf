@@ -8,12 +8,13 @@ import (
 
 var DB AbstractDatabase
 
-func Init(dbType string, configFunc func() interface{}) {
+func Init(dbType string, configFunc func() interface{}, tables ...interface{}) {
 	fmt.Println("dbType", dbType)
 	if dbType == "mysql" {
 		conf := configFunc()
 		fmt.Println("conf", conf)
 		DB = NewMysql(false, conf.(*config.MysqlOptions))
+		DB.AutoMigrate(tables...)
 	}
 }
 

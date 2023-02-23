@@ -54,13 +54,13 @@ func (sm *Manager) Clients() []interface{} {
 func (sm *Manager) Register(servers ...AbstractServer) *Manager {
 	for _, server := range servers {
 		serverName := server.GetName()
-		serviceName := server.GetServiceName()
-		fmt.Println("serverName:", serverName)
-		fmt.Println("serviceName:", serviceName)
-		fmt.Println("server:", server)
+		//serviceName := server.GetServiceName()
+		//fmt.Println("serverName:", serverName)
+		//fmt.Println("serviceName:", serviceName)
+		//fmt.Println("server:", server)
 		if _, ok := sm.servers[serverName]; !ok {
 			sm.servers[serverName] = server
-			fmt.Println("sm.servers[serverName]:", sm.servers[serverName].GetServiceName())
+			//fmt.Println("sm.servers[serverName]:", sm.servers[serverName].GetServiceName())
 		}
 	}
 	return sm
