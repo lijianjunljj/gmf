@@ -21,7 +21,7 @@ windows:.\gmf.exe start --name gateway  --config .\config\development.yaml
 linux:  
 chmod +x gmf  
 ./gmf start --name gateway  --config ./config/development.yaml  
-四、创建mysql数据库gmf,修改config里面的数据库配置文件
+四、创建mysql数据库gmf,修改config里面的数据库配置文件  
 五、启动用户服务  
 windows:.\gmf.exe start --name  userServer  --config .\config\development.yaml  
 linux:./gmf start --name userServer  --config ./config/development.yaml  
