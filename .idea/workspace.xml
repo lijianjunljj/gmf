@@ -5,7 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e763b753-fc21-44de-a21c-748f93c9bd73" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/start.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/start.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/development.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/development.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/proto/make_proto.bat" beforeDir="false" afterPath="$PROJECT_DIR$/script/proto/make_proto.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/proto/userModels.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/proto/userModels.pb.micro.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/proto/userService.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/proto/userService.pb.micro.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/proto/userService_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/const.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/etcd.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/mysql.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/parser/iniParser.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/parser/interface.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/parser/jsonParser.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/parser/yamlParser.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/config/web.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/db/factory.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/db/interface.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/db/mysql.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/db/sqlite.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/loger/loger.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/router/interface.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/server/interface.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/server/manager.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/server/server.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/filepath.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/time.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/wrapper/wrapper.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateway/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateway/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servers/servers.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/servers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servers/user/core/userService.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/core/userService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servers/user/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/router/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servers/user/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servers/user/wrappers/userWrapper.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/user/wrappers/userWrapper.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +63,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://D:/Program Files/Go/src/sync/waitgroup.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/go.mod" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cmd/create.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cmd/root.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cmd/start.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cmd/version.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/config/development.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/main.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/common/server/manager.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/gateway/server.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/servers/user/core/userService.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/servers/user/server.go" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -53,7 +95,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/go_projects/gmf/src/common/config&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/go_projects/gmfcommon&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -98,6 +140,11 @@
           <url>file://D:/Program Files/Go/src/flag/flag.go</url>
           <line>69</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/gateway/web/web.go</url>
+          <line>2</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

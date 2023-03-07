@@ -1,8 +1,8 @@
 package servers
 
 import (
-	"gmf/src/common/router"
-	"gmf/src/common/server"
+	"github.com/lijianjunljj/gmfcommon/router"
+	"github.com/lijianjunljj/gmfcommon/server"
 	"golang.org/x/sync/errgroup"
 )
 

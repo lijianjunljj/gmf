@@ -1,8 +1,8 @@
 package wrappers
 
 import (
+	"github.com/lijianjunljj/gmfcommon/wrapper"
 	"github.com/micro/go-micro/v2/client"
-	"gmf/src/common/wrapper"
 )
 
 type userWrapper struct {

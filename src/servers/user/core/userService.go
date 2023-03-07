@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"gmf/src/common/db"
+	"github.com/lijianjunljj/gmfcommon/db"
 	"gmf/src/servers/user/model"
 	"gmf/src/servers/user/services"
 	"gorm.io/gorm"

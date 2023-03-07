@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"gmf/src/common/router"
+	"github.com/lijianjunljj/gmfcommon/router"
 	"gmf/src/servers/user/handler"
 )
 

@@ -6,11 +6,11 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/lijianjunljj/gmfcommon/config"
+	"github.com/lijianjunljj/gmfcommon/config/parser"
+	"github.com/lijianjunljj/gmfcommon/server"
+	"github.com/lijianjunljj/gmfcommon/utils"
 	"github.com/spf13/cobra"
-	"gmf/src/common/config"
-	"gmf/src/common/config/parser"
-	"gmf/src/common/server"
-	"gmf/src/common/utils"
 	gateway "gmf/src/gateway"
 )
 

@@ -2,9 +2,9 @@ package gateway
 
 import (
 	"fmt"
+	"github.com/lijianjunljj/gmfcommon/config"
+	"github.com/lijianjunljj/gmfcommon/server"
 	"github.com/micro/go-micro/v2/web"
-	"gmf/src/common/config"
-	"gmf/src/common/server"
 	web2 "gmf/src/gateway/web"
 	servers "gmf/src/servers"
 	"golang.org/x/sync/errgroup"
@@ -14,8 +14,6 @@ import (
 
 var gatewayServer *Server
 
-//var lock sync.Mutex
-//var inited uint32 = 0
 var once sync.Once
 
 func Register(g *errgroup.Group) *Server {
@@ -30,23 +28,6 @@ func Register(g *errgroup.Group) *Server {
 func Start(cfg *config.Config) {
 	gatewayServer.Run(cfg)
 }
-
-//
-//func GetInstance(g *errgroup.Group) *Server {
-//	fmt.Println("GetInstance1")
-//	if atomic.LoadUint32(&inited) > 0 {
-//		return gatewayServer
-//	}
-//	fmt.Println("GetInstance2")
-//	lock.Lock()
-//	defer lock.Unlock()
-//	if gatewayServer == nil {
-//		fmt.Println("init gatewayServer.....")
-//		gatewayServer = NewServer(g)
-//		atomic.StoreUint32(&inited, 1)
-//	}
-//	return gatewayServer
-//}
 
 func NewServer(g *errgroup.Group) *Server {
 	s := &Server{}

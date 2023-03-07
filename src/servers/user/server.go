@@ -1,8 +1,8 @@
 package user
 
 import (
+	"github.com/lijianjunljj/gmfcommon/server"
 	"github.com/micro/go-micro/v2"
-	"gmf/src/common/server"
 	"gmf/src/servers/user/core"
 	"gmf/src/servers/user/router"
 	"gmf/src/servers/user/services"
@@ -17,6 +17,8 @@ func NewServer(g *errgroup.Group) *server.Server {
 	s.ClientService = NewClientService(s)
 	s.WebRouter = new(router.Router)
 	s.ServiceCallFunc = ServiceCallFunc()
+	s.ServiceClient()
+	s.Service = services.NewUserService(s.ServiceName, s.ClientService.Client())
 	s.G = g
 	return s
 }
